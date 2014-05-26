@@ -1,0 +1,12 @@
+#!/bin/sh
+cat <<EOF
+Content-Type: text/html; charset=utf-8
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Custer </title>
+</head>
+<body>
+EOF
+echo "<p>Je suis <strong>$SCRIPT_NAME</strong> servi par <strong>$SERVER_SOFTWARE</strong> pour <strong>$HTTP_USER_AGENT</strong>.</p>"
+echo "</body></html>"
