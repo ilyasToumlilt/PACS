@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT annuaire (elemcarnet*)>
+<!ELEMENT elemcarnet (personne, adresse, telephone)>
+<!ELEMENT personne (nom, prenom)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT adresse (rue, ville)>
+<!ELEMENT rue (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT telephone (EMPTY)>
+
+<!ATTLIST elemcarnet
+   date CDATA #REQUIRED
+>
+<!ATTLIST personne
+   sexe (M | F) #REQUIRED
+>
+<!ATTLIST rue
+   numero CDATA #REQUIRED
+>
+<!ATTLIST ville
+   codepostal CDATA #REQUIRED
+>
+<!ATTLIST telephone
+   fixe CDATA #REQUIRED
+>
