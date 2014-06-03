@@ -1,0 +1,75 @@
+ul li 
+{
+   display:none;
+}
+
+.first_level>li
+{
+   text-align: center;
+   display:block;
+   background-color: white;
+   color: black;
+   line-height: 200%;
+   border: 0.1em black solid;
+   width: 10em;
+   list-style-type: none;
+}
+
+.first_level>li:hover 
+{
+   background-color: blanchedalmond;
+}
+
+.first_level>li:hover .second_level>li:hover
+{
+   background-color: blanchedalmond;
+}
+
+.first_level>li:hover .second_level>li:hover .third_level>li:hover
+{
+   background-color: blanchedalmond;
+}
+
+.first_level>li:hover .second_level
+{
+   
+   position: absolute;
+   margin-left: 7.55em;
+   margin-top: -2.1em;
+}
+.first_level>li:hover .second_level>li
+{
+   display: block;
+   text-align: center;
+   background-color: white;
+   color: black;
+   line-height: 150%;
+   border: 0.1em black solid;
+   width: 10em;
+   list-style-type: none;
+   
+}
+
+.second_level>li:hover .third_level
+{
+   position: absolute;
+   margin-left: 7.55em;
+   margin-top: -1.6em;
+}
+
+.second_level>li:hover .third_level>li
+{
+   display: block;
+   text-align: center;
+   background-color: white;
+   color: black;
+   line-height: 150%;
+   border: 0.1em black solid;
+   width: 10em;
+   list-style-type: none;
+}
+
+a
+{
+   text-decoration: none;
+}
