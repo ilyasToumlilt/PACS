@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   <head>
+      <title>Qui suis-je ?</title>
+      <meta charset="UTF-8">
+   </head>
+   <body>
+      <script type="application/javascript" >
+	 var str = "";
+	 str += "<li> UserAgent : " + navigator.userAggent + "</li>";
+	 str += "<li> appName : " + navigator.appName + "</li>";
+	 str += "<li> appCodeName : " + navigator.appCodeName + "</li>";
+	 str += "<li> appVersion : " + navigator.appVersion + "</li>";
+	 // j'ai pas mis tout le reste le principe est là ...
+	 str = "<ul>" + str + "</ul>";
+	 document.writeln(str);
+      </script>
+   </body>
+</html>

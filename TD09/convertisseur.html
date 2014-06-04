@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Convertisseur</title>
+      <script type="application/javascript" >
+	 
+	 function checkNombre(n){ 
+	    var exprR = /^([\+\-]?)[1-9][0-9]*$/; 
+	    return exprR.test(n); 
+	 } 
+	 
+	 function convF_E( inp ){
+	    if ( !checkNombre(inp.value) ) {
+	       return inp.value + " n'est pas un nombre !";
+	    }else{
+	       return String(Number(inp.value) / 6.55957);
+	    }
+	 }
+	 function convE_F( inp ){
+	    if ( !checkNombre(inp.value) ) {
+	       return inp.value + " n'est pas un nombre !";
+	    } else {
+	       return String(Number(inp.value) * 6.55957);
+	    }
+	 }
+      </script>
+   </head>
+   <body>
+      <form onsubmit="return false">
+	 <label for="euro">Valeur en euros : </label>
+	 <input type="text" id="euro" name="euro" onchange="alert(convE_F(this))" />
+      </form>
+      <form onsubmit="return false">
+	 <label for="francs">Valeur en francs : </label>
+	 <input type="text" id="francs" name="francs" onchange="alert(convF_E(this))" />
+      </form>
+   </body>
+</html>

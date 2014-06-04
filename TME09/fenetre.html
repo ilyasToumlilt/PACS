@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   <head>
+      <title>TODO supply a title</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <script type="text/javascript">
+	 function redir(link){
+	    win = window.open(link.href, "exercice 1", "width=900,height=200,toolbar=no");
+	 }
+      </script>
+   </head>
+   <body>
+      <a href="qui-suis-je.html" onclick="redir(this); return false;" >Ouvrir l'exo 1</a><br/>
+      <a onclick="if ( win ) win.close();" >Fermer l'exo 1</a>
+   </body>
+</html>

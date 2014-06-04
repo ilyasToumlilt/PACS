@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   <head>
+      <title>TODO supply a title</title>
+      <meta charset="UTF-8">
+      <script type="text/javascript" >
+	 info = new Array( 
+	       "Code du Navigateur : " + navigator.appCodeName, 
+	       "Nom du Navigateur : " + navigator.appName, 
+	       "Version Navigateur : " + navigator.appVersion, 
+	       "Description du Navigateur : " + navigator.userAgent, 
+	       "Date de modification : " + document.lastModified, 
+	       "URL : " + document.location, 
+	       "URL d'origine : " + document.referrer 
+	 );
+      </script>
+   </head>
+   <body onload="alert(info.join('\n'))" >
+      <script type="text/javascript">
+	 document.writeln("<ul><li>" + info.join("</li><li>") + "</li></ul>");
+      </script>
+   </body>
+</html>

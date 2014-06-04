@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Insertion HTML</title>
+      <script>
+
+	 var table = document.createElement("table");
+
+	 function verifNombreEntier(n) {
+	    return /^([\+\-]?)[1-9][0-9]*$/.test(n);
+	 }
+
+	 function construction(debut, fin, pas) {
+	    if (verifNombreEntier(debut) && verifNombreEntier(fin) && verifNombreEntier(pas)) {
+	       deb = Number(debut);
+	       f = Number(fin);
+	       p = Number(pas);
+	       if (p == 0) {
+		  alert("Pas est nul, logique l'incrementation.");
+	       } else {
+		  tr = document.createElement("tr");
+
+		  for (i = deb; i <= f; i = i + p) {
+		     var txt = document.createTextNode(i);
+		     var td = document.createElement("td");
+		     td.appendChild(txt);
+		     tr.appendChild(td);
+		  }
+		  table.appendChild(tr);
+	       } 
+	    } else {
+	       alert("Saisissez des valeurs entieres.");
+	    }
+	 }
+
+
+      </script>
+   </head>
+   <body onload="document.getElementsByTagName('body')[0].appendChild(table);" >
+      <form>
+	 <label for="debut">Debut : </label>
+	 <input type="text" id="debut" name="debut" value="0" />
+	 <label for="fin">Fin : </label>
+	 <input type="text" id="fin" name="fin" value="0" />
+	 <label for="pas">Pas : </label>
+	 <input type="text" id="pas" name="pas" value="0" />
+	 <input type="button" value="Constuire le tableau" onclick="construction(debut.value,fin.value,pas.value)" />
+      </form>
+   </body>
