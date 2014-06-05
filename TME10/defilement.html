@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml"> 
+   <head> 
+      <title>defilement</title> 
+      <meta charset="UTF-8" />
+      <script type="text/javascript">
+	 images = ["train1.jpg", "train2.jpg", "train3.jpg", "train4.png"];
+	 function arreter (){
+	    last = images.length;
+	 }
+	 function activer (){
+	    if ( last !== images.length ){
+	       last = ( last + 1 ) % images.length;
+	       document.getElementById('tof').src = images[last];
+	       setTimeout(function(){activer()},300);
+	    }
+	 }
+      </script>
+   </head>
+   <body>
+      <div>
+	 <input type="button" id="arreter" value="arreter" onclick="arreter();" />
+	 <input type="button" id="activer" value="activer" onclick="last = 0; activer();" /><br/>
+	 <img alt="train1" id="tof" src="./train1.jpg" />
+      </div>
+   </body>
+</html>

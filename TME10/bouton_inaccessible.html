@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml"> 
+   <head> 
+      <title>Catch me if u can !</title> 
+      <meta charset="UTF-8" />
+      <script type="text/javascript" >
+	 left = 5;
+	 top = 5;
+	 function merci( rep ){
+	    alert("Merci d'avoir dit " + rep );
+	 }
+	 function bouger ( div ){
+	    div.style.left = ( ( Math.random() * 100 ) % 20 ) + "em";
+	    div.style.height = ( ( Math.random() * 100 ) % 20 ) + "em";
+	 }
+      </script>
+   </head>
+   <body>
+      <h1>Le PSG est-il le meilleur club du monde ?</h1>
+      <form action="" >
+	 <fieldset style="width: 7em;">
+	    <input type="button" value="OUI" onclick="merci(this.value)" />
+	    <div style="position: absolute; left: 5em; top: 5em; margin-top: 0.4em ;" onmouseover="bouger(this)">
+	       <input type="button" value="NON" onclick="merci(this.value)" /> 
+	    </div>
+	 </fieldset>
+      </form>
+   </body>
+</html>
